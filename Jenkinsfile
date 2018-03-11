@@ -1,29 +1,13 @@
 pipeline {
     agent any
-
+        tools{
+                maven 'Maven3.5'
+	     }
     stages {
-        stage('Compile') {
+stage('Build') {
             steps {
-		withmaven(maven:'Maven3.5'){
-		sh 'mvn clean compile' 
-            }
-	}
-	}
- stage('Testing') {
-            steps {
-                withmaven(maven:'Maven3.5'){
-                sh 'mvn test'
-            }
-        }
-        }
-
-  stage('Deployment') {
-            steps {
-                withmaven(maven:'Maven3.5'){
-                sh 'mvn deploy'
-            }
-        }
-        }
-
-    }
+                sh 'mvn -Dmaven.test.failure.ignore=true install'
+		  }
+		 }
+        	}		
 }
