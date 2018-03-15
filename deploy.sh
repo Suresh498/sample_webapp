@@ -1,3 +1,2 @@
 sshpass -p "root" scp /home/suresh/practice/CounterWebApp/target/CounterWebApp.war root@172.17.0.6:/home/practice/apache-tomcat-8.5.28/webapps
-  ://github.com/Suresh498/webapp.git/securityRealm>
 sshpass -p "root" ssh root@172.17.0.6 "JAVA_HOME=/home/practice/jdk1.8.0_161" "/home/practice/apache-tomcat-8.5.28/bin/startup.sh"
