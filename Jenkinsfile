@@ -1,24 +1,23 @@
 pipeline {
-
     agent any
         tools{
-                maven 'Maven3.5'
+                maven 'Maven-3.3.9'
 	     }
     stages {
 	stage('Compile') {
             steps {
-                sh 'mvn clean compile'
+				sh 'mvn clean compile'
                   }
                  }
-	stage('Test') {
+	stage('Testing stage') {
             steps {
-                sh 'mvn test'
+				sh 'mvn test'
                   }
                  }
-	stage('Build') 
+	stage('Deploy stage') 
 		{
             steps {
-                sh 'mvn install'
+				sh 'mvn deploy'
 		  }
 		 }
 	}
