@@ -24,7 +24,18 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
+<distributionManagement>
+  <repository>
+    <id>deployment</id>
+	<name>Internal Releases</name>
+    <url>http://localhost:8080/nexus-2.14.8-01/content/repositories/releases/</url>
+  </repository>
+  <snapshotRepository>
+    <id>deployment</id>
+    <name>Snapshot Releases</name>
+	<url>http://localhost:8080/nexus-2.14.8-01/content/repositories/snapshots/</url>
+  </snapshotRepository>
+</distributionManagement>
   <build>
     <finalName>sample_maven_WebApp</finalName>
   </build>
