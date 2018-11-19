@@ -16,9 +16,15 @@ pipeline {
                  }
 	stage('Install stage') 
 		{
-            steps {
-				sh 'mvn install'
+            steps {}
+			sh 'mvn install'
 		  }
 		 }
+	stage('Read Property File')
+	{
+        readProp = readProperties file: 'build.properties'
+        echo """The application name is ${readProp['deploy.app.name']}"""
+    	}
+
 	}
 }	
