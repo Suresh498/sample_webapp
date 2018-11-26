@@ -28,12 +28,12 @@
   <repository>
     <id>deployment</id>
 	<name>Internal Releases</name>
-    <url>http://localhost:8080/nexus-2.14.8-01/content/repositories/releases/</url>
+    <url>http://localhost:8081/repository/maven-releases/</url>
   </repository>
   <snapshotRepository>
     <id>deployment</id>
     <name>Snapshot Releases</name>
-	<url>http://localhost:8080/nexus-2.14.8-01/content/repositories/snapshots/</url>
+	<url>http://localhost:8081/repository/maven-snapshots/</url>
   </snapshotRepository>
 </distributionManagement>
   <build>
