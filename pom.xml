@@ -4,7 +4,7 @@
   <groupId>com.sample.training</groupId>
   <artifactId>sample_maven_WebApp</artifactId>
   <packaging>war</packaging>
-  <version>1.0</version>
+  <version>1.0-SNAPSHOT</version>
   <name>sample_maven_Webapp</name>
   <url>http://maven.apache.org</url> 
 <reporting>
